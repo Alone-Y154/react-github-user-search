@@ -16,6 +16,7 @@
     --dev_rff_color: #4B6A9B;
     --dev_rff_num_color: #2B3442;
     --dev_links_color: #4B6A9B;
+    --dev_theme_color_hover:#222731;
   }
   
   [data-theme = "dark"] {
@@ -36,6 +37,7 @@
     --dev_rff_color:#FFF;
     --dev_rff_num_color: #FFF;
     --dev_links_color: #FFF;
+    --dev_theme_color_hover: #90A4D4;
   }
   
   
@@ -87,6 +89,11 @@
   gap: 16px;
   cursor: pointer;
   }
+
+  .dev-theme:hover {
+    color: var(--dev_theme_color_hover);
+    border: 1px dashed var(--dev_theme_color_hover);
+  }
   
   .dev-theme p{
     color:var(--dev_theme_color);
@@ -96,6 +103,10 @@
   font-weight: 700;
   line-height: normal;
   letter-spacing: 2.5px;
+  }
+
+  .dev-theme p:hover {
+    color: var(--dev_theme_color_hover);
   }
   
   .dev-theme img {
@@ -163,6 +174,11 @@
   outline: none;
   border: none;
   margin-right: 10px;
+  cursor: pointer;
+  }
+  
+  .dev-search button:hover {
+    background: #60ABFF;
   }
   
   .dev-info {
@@ -274,7 +290,7 @@
     display: flex;
     margin-bottom: 1rem;
     align-items: center;
-  
+    cursor: pointer;
   }
   
   .location img {
@@ -319,5 +335,137 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  }
+
+  .dev-details-links  div div p:hover {
+    text-decoration-line: underline;
+    }
+  
+  
+
+@media (max-width:750px){
+    .container {
+      width: 573px;
+    }
+    .dev-search {
+      width: 573px;
+    }
+  
+    .dev-info {
+      width: 573px;
+      padding: 40px;
+    }
+    .dev-details-name {
+      flex-direction: column;
+      width: 176px;
+    }
+    .dev-details-name-joined  {
+      margin-right: 10px;
+      margin-top: 2px;
+      margin-bottom: 38px
+    }
+    .dev-details-bio {
+      width: 493px;
+      margin-left: -9.6rem;
+    }
+  
+    .dev-details-repo{
+      margin-left: -9.6rem;
+      width: 493px;
+  
+    }
+    .dev-details-links {
+      margin-left: -9.6rem;
+      width: 450px;
+    }
+  
+  
+  }
+  
+  @media (max-width: 500px) {
+    .container {
+      width: 327px;
+    }
+    .dev-search {
+    width: 327px;
+    }
+  
+    .dev-search img {
+      width: 20px;
+    height: 20px;
+    margin-left: 8px;
+    position: relative;
+    top: 5px;
+    margin-right: 4px;
+    }
+  
+    .dev-search input{
+    width: 184px;
+    font-size: 13px;
+    }
+  
+    .dev-search button {
+      width: 84px;
+    height: 46px;
+    font-size: 14px;
+    }
+    .dev-avatar img {
+      width: 70px;
+      height: 70px;
+      flex-shrink: 0;
+    border-radius: 70px;
+    margin-right: 37px;
+    }
+  
+    .dev-info {
+      width: 327px;
+      padding: 24px;
+      margin-bottom: 2rem;
+    }
+    .dev-details-name {
+      flex-direction: column;
+      width: 144px;
+    }
+    .dev-details-name-username  .dev-name {
+      font-size: 16px;
+    }
+    .dev-details-name-username  .dev-username {
+      font-size: 13px;
+    }
+    .dev-details-name-joined  {
+      margin-right: 0px;
+      margin-top: 2px;
+      margin-bottom: 10px;
+      font-size: 13px;
+    }
+    .dev-details-bio {
+      width: 279px;
+      margin-left: -6.6rem;
+      font-size: 13px;
+    }
+  
+    .dev-details-repo{
+      margin-left: -6.6rem;
+      width: 279px;
+      text-align: center;
+    }
+  
+    .repo , .followers , .following {
+      font-size: 11px;
+    }
+  
+    .repo-num , .followers-num , .following-num  {
+      font-size: 16px;
+    }
+    .dev-details-links {
+      margin-left: -6.6rem;
+      width: 279px;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: start;
+    }
+    .dev-details-links div div p  {
+      font-size: 13px;
+    }
   }
   

@@ -96,7 +96,7 @@ const toggleTheme = () => {
         <div className="dev-input">
 
           <img src="assets/icon-search.svg" alt=""/>
-          <input type="text" name="" onChange={userInput} value= {searchString}  placeholder="Search GitHub username…" />
+          <input type="text" name="" onChange={userInput} value= {searchString}  placeholder="Search GitHub username…" required/>
         </div>
 
         <button type="submit" name="button">Search</button>
@@ -132,7 +132,7 @@ const toggleTheme = () => {
           <div className="dev-details-repo">
             <div className="dev-repo">
               <p className="repo">Repos</p>
-              <p className="repo-num">{(userData.repos) ? (userData.public_repos) : "8"}</p>
+              <p className="repo-num">{(userData.public_repos) ? (userData.public_repos) : "8"}</p>
             </div>
             <div className="dev-followers">
               <p className="followers">Followers</p>
@@ -156,7 +156,7 @@ const toggleTheme = () => {
                 <img src="assets/icon-website.svg" alt=""/>
                 <p>
                   <a href={(userData.blog)}>
-                  {(userData.blog) ? (userData.blog) : "https://github.blog"} 
+                  {(userData.blog) ? (userData.blog).slice(8,28) : "https://github.blog"} 
                   </a>
                 </p>
               </div>
